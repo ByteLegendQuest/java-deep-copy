@@ -18,8 +18,8 @@ public class Home {
 
     // Deep copy the instance and return the deep copy of `home`
     public static Home deepCopy(Home home) {
-        Home copy_of_home = new Home(new Cat(""));
-        copy_of_home = home;
-        return copy_of_home;
+       private class Home;
+       this.Home=home;
+       return Home;
     }
 }
