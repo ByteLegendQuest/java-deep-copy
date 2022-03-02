@@ -3,7 +3,7 @@ package com.bytelegend;
 import com.bytelegend.pet.Cat;
 
 public class Home {
-    public Cat cat;
+    private Cat cat;
 
     public Home(Cat cat) {
         this.cat = cat;
@@ -18,8 +18,9 @@ public class Home {
 
     // Deep copy the instance and return the deep copy of `home`
     public static Home deepCopy(Home home) {
-       private class Home;
-       this.Home=home;
-       return Home;
+        Home Copy = new Home(new Cat(""));
+        Copy = home;
+        return Copy;  
     }
+  
 }
