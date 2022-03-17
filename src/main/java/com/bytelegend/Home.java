@@ -20,7 +20,7 @@ public class Home {
     public static Home deepCopy(Home home) {
         Home home = new Home(new Cat(home.cat.name));
 
-
+        return home;
 
     }
 }
