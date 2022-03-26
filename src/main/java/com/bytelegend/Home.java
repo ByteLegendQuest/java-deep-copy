@@ -13,11 +13,12 @@ public class Home {
         Home home = new Home(new Cat("Tom"));
         Home deepCopy = deepCopy(home);
 
-        System.out.println(home.cat != deepCopy.cat);
+        System.out.println(home.cat == deepCopy.cat);
     }
 
     // Deep copy the instance and return the deep copy of `home`
     public static Home deepCopy(Home home) {
-        return new Home(home.cat);
+        Cat dccat = new Cat(home.cat.name)
+        return new Home(dccat);
     }
 }
