@@ -16,6 +16,7 @@ public class Home {
         System.out.println(home.cat == deepCopy.cat);
     }
 
-    // Deep copy the instance and return the deep copy of `home`
-    public static Home deepCopy(Home home) {}
+    public static Home deepCopy(Home home) {
+        return new Home(new Cat(home.cat.name));
+    }
 }
