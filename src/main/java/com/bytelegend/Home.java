@@ -9,7 +9,6 @@ public class Home {
         this.cat = cat;
     }
 
-
     public static void main(String[] args) {
         Home home = new Home(new Cat("Tom"));
         Home deepCopy = deepCopy(home);
@@ -18,8 +17,5 @@ public class Home {
     }
 
     // Deep copy the instance and return the deep copy of `home`
-    public static Home deepCopy(Home home) {
-        Home s = new Home(new Cat(home.cat.name));
-        return s;
-    }
+    public static Home deepCopy(Home home) {}
 }
