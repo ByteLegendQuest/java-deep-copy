@@ -11,7 +11,7 @@ public class Home {
 
     public static void main(String[] args) {
         Home home = new Home(new Cat("Tom"));
-        Home deepCopy = deepCopy(home);
+        Home deepCopy = home;
 
         System.out.println(home.cat == deepCopy.cat);
     }
