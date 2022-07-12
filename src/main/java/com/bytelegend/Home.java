@@ -15,10 +15,7 @@ public class Home {
 
         System.out.println(home.cat == deepCopy.cat);
     }
-
-    // Author: Emilly Omena
     // Deep copy the instance and return the deep copy of `home`
-    // Stranger Things : The Inverse House
     public static Home deepCopy(Home home) {
         Home strangeHome = home;
         return strangeHome;
