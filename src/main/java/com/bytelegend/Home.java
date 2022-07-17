@@ -6,7 +6,7 @@ public class Home implements Cloneable{
     public Cat cat;
 
     public Home(Cat cat) {
-        this.cat = cat;
+        this.cat = new Cat(cat.name);
     }
 
     public static void main(String[] args) {
@@ -21,6 +21,7 @@ public class Home implements Cloneable{
     	Home temp;
 		try {
 			temp = (Home)home.clone();
+			temp.cat = new Home(home.cat).cat;
 		} catch (CloneNotSupportedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
