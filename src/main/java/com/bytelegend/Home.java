@@ -2,7 +2,7 @@ package com.bytelegend;
 
 import com.bytelegend.pet.Cat;
 
-public class Home implements Clonable {
+public class Home implements Cloneable{
     public Cat cat;
 
     public Home(Cat cat) {
@@ -18,14 +18,15 @@ public class Home implements Clonable {
 
     // Deep copy the instance and return the deep copy of `home`
     public static Home deepCopy(Home home) {
-        Home temp;
-        try {
-            temp = (Home)home.clone();
-            temp.cat = new Home(home.cat).cat;
-        } catch (CloneNotSupportedException e) {
+    	Home temp;
+		try {
+			temp = (Home)home.clone();
+			temp.cat = new Home(home.cat).cat;
+		} catch (CloneNotSupportedException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 			return null;
 		}
-        return temp;
+    	return temp;
     }
 }
