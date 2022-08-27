@@ -6,7 +6,7 @@ public class Home implements Clonable {
     public Cat cat;
 
     public Home(Cat cat) {
-        this.cat = cat;
+        this.cat = new Cat(cat.name);
     }
 
     public static void main(String[] args) {
