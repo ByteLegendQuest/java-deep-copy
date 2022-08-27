@@ -2,7 +2,7 @@ package com.bytelegend;
 
 import com.bytelegend.pet.Cat;
 
-public class Home implements Clonable {
+public class Home implements Cloneable {
     public Cat cat;
 
     public Home(Cat cat) {
