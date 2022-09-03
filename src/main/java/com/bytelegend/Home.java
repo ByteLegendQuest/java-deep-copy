@@ -17,5 +17,9 @@ public class Home {
     }
 
     // Deep copy the instance and return the deep copy of `home`
-    public static Home deepCopy(Home home) {}
+    public static Home deepCopy(Home home) {
+        Cat cat1=new Cat(home.cat.name);
+        Home home1=new Home(cat1);
+        return home1;
+    }
 }
