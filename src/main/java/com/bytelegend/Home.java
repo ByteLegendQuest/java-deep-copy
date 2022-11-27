@@ -2,15 +2,11 @@ package com.bytelegend;
 
 import com.bytelegend.pet.Cat;
 
-public class Home implements Cloneable {
+public class Home {
     public Cat cat;
 
     public Home(Cat cat) {
         this.cat = cat;
-    }
-
-    public Home(Home home) {
-        this.cat = new Cat(home.cat.name);
     }
 
     public static void main(String[] args) {
@@ -21,7 +17,5 @@ public class Home implements Cloneable {
     }
 
     // Deep copy the instance and return the deep copy of `home`
-    public static Home deepCopy(Home home) {
-       return new Home(home);
-    }
+    public static Home deepCopy(Home home) {}
 }
