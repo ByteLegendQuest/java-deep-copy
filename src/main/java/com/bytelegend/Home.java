@@ -10,7 +10,7 @@ public class Home implements Cloneable {
     }
 
     public Home(Home home) {
-        this.cat = home.cat;
+        this.cat = new Cat(home.cat.name);
     }
 
     public static void main(String[] args) {
