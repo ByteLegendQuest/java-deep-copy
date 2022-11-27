@@ -9,6 +9,10 @@ public class Home implements Cloneable {
         this.cat = cat;
     }
 
+    public Home(Home home) {
+        this.cat = home.cat;
+    }
+
     public static void main(String[] args) {
         Home home = new Home(new Cat("Tom"));
         Home deepCopy = deepCopy(home);
@@ -18,6 +22,6 @@ public class Home implements Cloneable {
 
     // Deep copy the instance and return the deep copy of `home`
     public static Home deepCopy(Home home) {
-       return new Home(home.cat);
+       return new Home(home);
     }
 }
