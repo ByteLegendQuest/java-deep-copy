@@ -18,10 +18,6 @@ public class Home implements Cloneable {
 
     // Deep copy the instance and return the deep copy of `home`
     public static Home deepCopy(Home home) {
-        try {
-            return (Home) home.clone();
-        } catch (CloneNotSupportedException e) {
-            throw new RuntimeException(e);
-        }
+       return new Home(home.cat);
     }
 }
