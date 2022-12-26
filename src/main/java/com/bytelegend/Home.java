@@ -1,6 +1,6 @@
 package com.bytelegend;
 
-import com.bytelegend.pet.Cat;
+import com.bytelegend.Cat;
 
 public class Home {
     public Cat cat;
@@ -17,5 +17,7 @@ public class Home {
     }
 
     // Deep copy the instance and return the deep copy of `home`
-    public static Home deepCopy(Home home) {}
+    public static Home deepCopy(Home home) {
+        return new Home(home.cat);
+    }
 }
