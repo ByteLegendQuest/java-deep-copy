@@ -5,6 +5,10 @@ import com.bytelegend.pet.Cat;
 public class Home {
     public Cat cat;
 
+    Home() {
+
+    }
+
     public Home(Cat cat) {
         this.cat = cat;
     }
@@ -17,5 +21,8 @@ public class Home {
     }
 
     // Deep copy the instance and return the deep copy of `home`
-    public static Home deepCopy(Home home) {}
+    public static Home deepCopy(Home home) {
+        Home deepCopy = new Home(new Cat("home.cat.name"));
+        return deepCopy;
+    }
 }
