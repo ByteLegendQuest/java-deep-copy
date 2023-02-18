@@ -17,5 +17,25 @@ public class Home {
     }
 
     // Deep copy the instance and return the deep copy of `home`
-    public static Home deepCopy(Home home) {}
+    public static Home deepCopy(Home home) {
+        Home obj = null;
+        try {
+            // 将对象写成 Byte Array
+            ByteArrayOutputStream bos = new ByteArrayOutputStream();
+            ObjectOutputStream out = new ObjectOutputStream(bos);
+            out.writeObject(from);
+            out.flush();
+            out.close();
+ 
+            // 从流中读出 byte array，调用readObject函数反序列化出对象
+            ObjectInputStream in = new ObjectInputStream(
+                    new ByteArrayInputStream(bos.toByteArray()));
+            obj = in.readObject();
+        } catch(IOException e) {
+            e.printStackTrace();
+        } catch(ClassNotFoundException e2) {
+            e2.printStackTrace();
+        }
+        return obj;
+    }
 }
